@@ -13,19 +13,5 @@
 <textrea id="content" row="8"></textrea>
 <button id="btn">發送文章</button>
 
-<script>
-
-var title = document.getElementById("title")
-var content = document.getElementById("content")
-var btn = document.getElementById("btn")
-
-btn.addEvenlistener("click", function() {
-    list.innerHTML = list.innerHTML + `
-    <div class="article">
-        <h2>${title.value}</h2>
-        <p>${content.value}</p>
-    `;
-})
-</script>
 </body>
 </html>
