@@ -2,34 +2,30 @@
 <html>
 <head>
 <mate charset="UTF-8" />
-<title>低能測驗</title>
+<title>遊民小站</title>
 </head>
 <body>
+    <h1>遊民小站</h1>
+<p>文章標題</p>
+<input type="text" id="title">
+
+<p>文章內容</p>
+<textrea id="content" row="8"></textrea>
+<button id="btn">發送文章</button>
+
 <script>
 
-var Q = [
-    {prompt:"A+A=AA?,\n (1)是 \N(2)否",
-    answer:"1"},
-    {prompt:"A+B=AB?,\n (1)是 \N(2)否",
-    answer:"1"},
-    {prompt:"A+C=AC?,\n (1)是 \N(2)否",
-    answer:"1"},
-]
+var title = document.getElementById("title")
+var content = document.getElementById("content")
+var btn = document.getElementById("btn")
 
-var score = 0;
-for (i=0 ;i<Q.length; i++){
-    var input=prompt(Q[i].prompt);
-    if (input==Q[i].answer){
-        score++;
-        alert("答對了！");
-    }
-    else{
-        alert("答錯了！");
-    }
-
-}
-
-alert("總共答對了"+ score + "題");
+btn.addEvenlistener("click", function() {
+    list.innerHTML = list.innerHTML + `
+    <div class="article">
+        <h2>${title.value}</h2>
+        <p>${content.value}</p>
+    `;
+})
 </script>
 </body>
 </html>
