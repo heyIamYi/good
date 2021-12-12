@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-<mate charset="UTF-8" />
-<title>遊民小站</title>
-</head>
-<body>
-    <body background="https://cdn2.ettoday.net/images/5772/5772264.jpg">
-    <h1>遊民小站</h1>
-<p>文章標題</p>
-<input type="text" id="title">
-
-<p>文章內容</p>
-<textarea id="content" row="8"></textarea>
-<button id="btn">發送文章</button>
-
-        <script>
-var title = document.getElementById("title")
-var content = document.getElementById("content")
-var btn = document.getElementById("btn")
-
-btn.addEventListener("click", function() {
-    list.innerHTML = list.innerHTML + `
-    <div class="article">
-        <h2>${title.value}</h2>
-        <p>${content.value}</p>
-    `;
-})</script>
-</body>
+    <head>
+    <mate charset="UTF-8" />
+    <title>遊民小站註冊頁面</title>
+    </head>
+    <body>
+        <!-- form元素的action屬性用於設定表單資料向何處發送，而method屬性則用於設定表單資料的傳送方式 -->
+        <!-- Lable為input的標註 -->
+        <form action="form_acction.php" method="get">
+        <h1>基本資料</h1>
+        <p>帳號</p>
+        <!-- input不是用style而是用type -->
+        <!-- textarea與input分別是不同的東西 -->
+        <input type="text" placeholder="請輸入帳號"></textarea>
+        <br/>
+        <p>密碼</p>
+        <input type="password" placeholder="請輸入密碼"></textarea>
+        <br/>
+        <br/>
+        <label for="my_name">姓名</label>
+        <br/>
+        <input type="text"  id="my_name" name="my_name">
+        </br>
+        </br>
+        <label for="grade">年級</label>
+        <select id="grade">
+            <option value="一年級">一年級</option>
+            <option value="二年級">二年級</option>
+            <option value="三年級">三年級</option>
+            <option value="四年級">四年級</option>
+        </select>
+        </br>
+        </br>
+        <p>性別</p>
+        <lable for="male">男</lable>
+        <!-- type是告訴瀏覽器這裡輸入的類型，ID是為元素命名 -->
+            <input type="radio" id="male" name="sex">
+        <label for="female">女</label>
+            <input type="radio" id="female" name="sex">
+        <br/>
+        <br/>
+        <lable for="remarks">備註</lable>
+        <br/>
+        <!-- Textarea的高與寬分別用rows(高)跟cols(寬)設定 -->
+        <textarea rows=10 cols=40 id="remarks" placeholder="在此輸入你的想法....."></textarea>
+        <br/>
+        <input type="submit" value="送出">
+        </form>
+    </body>
 </html>
