@@ -1,0 +1,22 @@
+
+.boxx{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    position: relative;
+
+}
+
+@keyframes boxx {
+    0%{ background-color: coral; top:10px;left:10px;}
+    30%{ background-color: cornflowerblue; top:20px;left:20px;}
+    50% {background-color: red;top:30px;left:30px;}
+    80%{ background-color: cornflowerblue; top:20px;left:20px;}
+    100%{ background-color: coral; top:10px;left:10px;}
+}
+
+.boxx-ani{
+    animation-name: boxx;
+    animation-duration: 0.0005s;
+    animation-iteration-count: infinite;
+}
